@@ -8,23 +8,33 @@
     <link rel="stylesheet" href="buttom.css">
 </head>
 <body>
-    <div id = "nav">
-        <label for="searchInput">Enter ID to search :</label>
-        <input type="text" id="searchInput">
-        <button class="button-37" onclick="searchAndDisplay()">Search</button>
-        
+    <div id="container">
+        <div id = "nav">
+            <div id="right">
+                <h1>ระบบจัดการข้อมูล</h1>
+            </div>
+            <div id="left">
+                <label for="searchInput">Enter ID to search :</label>
+                <input type="text" id="searchInput">
+                <button class="button-37" onclick="searchAndDisplay()">Search</button>
+            </div>
+        </div>
+        <div style="text-align: end; background-color: aliceblue; padding: 1rem; ">
+            <button class="button-33"  onclick="displayAll()">
+                show all</button>
+            <button class="button-33" style="background-color: rgb(236, 228, 154);" onclick="showInsertPopup()">
+                Edit room</button>
+        </div>
+        <div id="output">
+            <!-- List room -->
+        </div>
     </div>
-    <div style="text-align: center; ">
-        <button class="button-33"  onclick="displayAll()">show all</button>
-        <button class="button-33" style="background-color: rgb(236, 228, 154);" onclick="showInsertPopup()">Edit room</button>
-    </div>
-    <div id="output"></div>
-
 
     <!-- Popup for Insert -->
     <div class="popup" id="insertPopup">
         <div class="popup-content">
-            <span class="close" onclick="closeInsertPopup()">&times;</span>
+            <div style="text-align: center;">แก้ไขข้อมูล</div>
+            <span  style="width: 10px;" class="close" onclick="closeInsertPopup()">&times;</span>
             <label for="insertKey">Key:</label>
             <input type="text" id="insertKey">
             <label for="insertStatus">Status:</label>
