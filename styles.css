@@ -1,12 +1,19 @@
 *{
     margin: 0;
     padding: 0;
-    
+}
+#container{
+  background-image: linear-gradient(to right, #69ff3b ,#00FFFF);
+  padding: 1rem 5rem;
+  margin: 15px;
+  border-radius: 12px;
+  box-shadow: rgb(102, 123, 129) 5px 5px 15px;
 }
 #nav{
     padding: 1.2rem;
     margin-top: 1rem;
-    text-align: center;
+    display: flex;
+    justify-content: space-between;
 }
 .result-container {
     padding: 10px;
@@ -15,18 +22,15 @@
   }
   .result-item {
     margin-bottom: 5px;
+    border-radius: 5px;
   }
   #output {
     display: block;
     margin: auto;
+    background-color: aliceblue;
     padding: 1rem;
     gap: 10px;
   }
-
-  /* .result-container {
-    display: flex;
-    gap: 10px;
-  } */
   .result-item {
     border: 1px solid #ccc;
     flex-grow: 1;
@@ -35,7 +39,6 @@
     max-width: 90%;
     padding: 3rem;
     height: 4rem;
-    /* margin: 1rem; */
   }
   .occupied {
     background-color: #d6c7c7; /* สีพื้นหลังสำหรับสถานะ "ไม่ว่าง" */
@@ -51,14 +54,17 @@
     justify-content: center;
     align-items: center;
   }
-  
   .popup-content {
+    display: block;
+    margin:  auto 2rem;
     background-color: white;
-    padding: 20px;
+    padding: 25px;
     border-radius: 10px;
     position: relative;
   }
-  
+  .popup-content >* {
+    width: 100%;
+  }
   .close {
     position: absolute;
     top: 10px;
@@ -66,8 +72,6 @@
     font-size: 20px;
     cursor: pointer;
   }
-  
-  /* Style for the Close button */
   .close-button {
     padding: 10px;
     background-color: #f44336;
